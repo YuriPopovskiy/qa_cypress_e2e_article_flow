@@ -30,7 +30,7 @@ describe('article', () => {
     cy.createArticle(title, description, body)
       .then((response) => {
         const slug = response.body.article.slug;
-        cy.visit(`article/${slug}`);
+        cy.visit(`https://conduit.mate.academy/article/${slug}`);
       });
 
     cy.contains('.btn', 'Delete Article').click();
